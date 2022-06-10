@@ -1,0 +1,12 @@
+<!--Just Extending means whatever is written in the base.html will be on the page.-->
+<!--adding block content part on the child web pages, and we can add other elements in
+that particular web page, as per our need.-->
+
+
+{% extends 'base.html' %}
+
+{% block content_first %}
+    <h1>Welcome To Django Tutorial</h1>
+    <p>This is a template</p>
+    <p>I am King</p>
+{% endblock content_first %}

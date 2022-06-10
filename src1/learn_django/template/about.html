@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content_first %}
+    <h1>About Me</h1>
+    <p>My name is Sayak Roy. I am the CEO of ROY & Co.</p>
+    <p>I have worked in JP Morgan Chase & Co. for several years.</p>
+    <p>Recently, I have started my new company.</p>
+
+
+    <p>
+        {{ my_text }} , {{ my_number }}<br>
+        {{my_list}}
+    </p>
+
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+    </ul>
+    <ul>
+    {% for my_sub_item in my_list %}
+        {% if my_sub_item == 123 %}
+            <li>{{ forloop.counter }} - {{ my_sub_item|add:22 }}</li>
+        {% elif my_sub_item == "roy" %}
+            <li>This is a string.</li>
+        {% else %}
+            <li>{{ forloop.counter }} - {{ my_sub_item }}</li>
+        {% endif %}
+
+
+    {% endfor %}
+    </ul>
+
+{% endblock content_first %}
